@@ -65,7 +65,30 @@ let ShiftGoals = React.createClass({
       return <td key={i} style={td_style}>{shift_info.shift_date.toLocaleDateString('en-US', date_options)}</td>;
     });
 
+    let shift_1 = ((0).to(6)).map(num => {
+      return (<td key={num}><ShiftGoalElement shift_number='1' element_info={this.state.shift_goals[num]} /></td>);
+    });
 
+    let shift_2 = ((0).to(6)).map(num => {
+      return (<td key={num}><ShiftGoalElement shift_number='2' element_info={this.state.shift_goals[num]} /></td>);
+    });
+
+    let shift_3 = ((0).to(6)).map(num => {
+      return (<td key={num}><ShiftGoalElement shift_number='3' element_info={this.state.shift_goals[num]} /></td>);
+    });
+
+    let shift_4 = ((0).to(6)).map(num => {
+      return (<td key={num}><ShiftGoalElement shift_number='4' element_info={this.state.shift_goals[num]} /></td>);
+    });
+
+    let shift_5 = ((0).to(6)).map(num => {
+      return (<td key={num}><ShiftGoalElement shift_number='5' element_info={this.state.shift_goals[num]} /></td>);
+    });
+
+    let shift_6 = ((0).to(6)).map(num => {
+      return (<td key={num}><ShiftGoalElement shift_number='6' element_info={this.state.shift_goals[num]} /></td>);
+    });
+    
     return (
       <table className='table'>
         <thead></thead>
@@ -75,67 +98,27 @@ let ShiftGoals = React.createClass({
           </tr>
           <tr>
             <td>6.00 - 9.00</td>
-            <td><ShiftGoalElement shift_number='1' element_info={this.state.shift_goals[0]} /></td>
-            <td><ShiftGoalElement shift_number='1' element_info={this.state.shift_goals[1]} /></td>
-            <td><ShiftGoalElement shift_number='1' element_info={this.state.shift_goals[2]} /></td>
-            <td><ShiftGoalElement shift_number='1' element_info={this.state.shift_goals[3]} /></td>
-            <td><ShiftGoalElement shift_number='1' element_info={this.state.shift_goals[4]} /></td>
-            <td><ShiftGoalElement shift_number='1' element_info={this.state.shift_goals[5]} /></td>
-            <td><ShiftGoalElement shift_number='1' element_info={this.state.shift_goals[6]} /></td>
+            {shift_1}
           </tr>
           <tr>
             <td>9.00 - 12.00</td>
-            <td><ShiftGoalElement shift_number='2' element_info={this.state.shift_goals[0]} /></td>
-            <td><ShiftGoalElement shift_number='2' element_info={this.state.shift_goals[1]} /></td>
-            <td><ShiftGoalElement shift_number='2' element_info={this.state.shift_goals[2]} /></td>
-            <td><ShiftGoalElement shift_number='2' element_info={this.state.shift_goals[3]} /></td>
-            <td><ShiftGoalElement shift_number='2' element_info={this.state.shift_goals[4]} /></td>
-            <td><ShiftGoalElement shift_number='2' element_info={this.state.shift_goals[5]} /></td>
-            <td><ShiftGoalElement shift_number='2' element_info={this.state.shift_goals[6]} /></td>
+            {shift_2}
           </tr>
           <tr>
             <td>12.00 - 3.00</td>
-            
-            <td><ShiftGoalElement shift_number='3' element_info={this.state.shift_goals[0]} /></td>
-            <td><ShiftGoalElement shift_number='3' element_info={this.state.shift_goals[1]} /></td>
-            <td><ShiftGoalElement shift_number='3' element_info={this.state.shift_goals[2]} /></td>
-            <td><ShiftGoalElement shift_number='3' element_info={this.state.shift_goals[3]} /></td>
-            <td><ShiftGoalElement shift_number='3' element_info={this.state.shift_goals[4]} /></td>
-            <td><ShiftGoalElement shift_number='3' element_info={this.state.shift_goals[5]} /></td>
-            <td><ShiftGoalElement shift_number='3' element_info={this.state.shift_goals[6]} /></td>
+            {shift_3}
           </tr>
           <tr>
             <td>3.00 - 6.00</td>
-            
-            <td><ShiftGoalElement shift_number='4' element_info={this.state.shift_goals[0]} /></td>
-            <td><ShiftGoalElement shift_number='4' element_info={this.state.shift_goals[1]} /></td>
-            <td><ShiftGoalElement shift_number='4' element_info={this.state.shift_goals[2]} /></td>
-            <td><ShiftGoalElement shift_number='4' element_info={this.state.shift_goals[3]} /></td>
-            <td><ShiftGoalElement shift_number='4' element_info={this.state.shift_goals[4]} /></td>
-            <td><ShiftGoalElement shift_number='4' element_info={this.state.shift_goals[5]} /></td>
-            <td><ShiftGoalElement shift_number='4' element_info={this.state.shift_goals[6]} /></td>
+            {shift_4}
           </tr>
           <tr>
             <td>6.00 - 9.00</td>
-            
-            <td><ShiftGoalElement shift_number='5' element_info={this.state.shift_goals[0]} /></td>
-            <td><ShiftGoalElement shift_number='5' element_info={this.state.shift_goals[1]} /></td>
-            <td><ShiftGoalElement shift_number='5' element_info={this.state.shift_goals[2]} /></td>
-            <td><ShiftGoalElement shift_number='5' element_info={this.state.shift_goals[3]} /></td>
-            <td><ShiftGoalElement shift_number='5' element_info={this.state.shift_goals[4]} /></td>
-            <td><ShiftGoalElement shift_number='5' element_info={this.state.shift_goals[5]} /></td>
-            <td><ShiftGoalElement shift_number='5' element_info={this.state.shift_goals[6]} /></td>
+            {shift_5}
           </tr>
           <tr>
             <td>9.00 - midnight</td>
-            
-            <td><ShiftGoalElement shift_number='6' element_info={this.state.shift_goals[0]} /></td>
-            <td><ShiftGoalElement shift_number='6' element_info={this.state.shift_goals[1]} /></td>
-            <td><ShiftGoalElement shift_number='6' element_info={this.state.shift_goals[2]} /></td>
-            <td><ShiftGoalElement shift_number='6' element_info={this.state.shift_goals[3]} /></td>
-            <td><ShiftGoalElement shift_number='6' element_info={this.state.shift_goals[4]} /></td>
-            <td><ShiftGoalElement shift_number='6' element_info={this.state.shift_goals[5]} /></td>
-            <td><ShiftGoalElement shift_number='6' element_info={this.state.shift_goals[6]} /></td>
+            {shift_6}
           </tr>
           
         </tbody>

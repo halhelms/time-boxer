@@ -26,9 +26,18 @@ var n = this,
  };
 
  who = function() {
-  console.log('%c⭐️ ' + this.__proto__.constructor.displayName + ' @ ' + window.web_root + this.__proto__.path, 'color:green');
+  var max_column_width = 20;
+  var fill = "";
+  var required_fill_spacing = max_column_width - this.__proto__.constructor.displayName.length;
+  for (i=0; i<required_fill_spacing; i++) {
+    fill += " ";
+  }
+  console.log('%c⭐️ ' + this.__proto__.constructor.displayName + fill + ' @ ' + window.web_root + this.__proto__.path, 'color:green');
  }
 
- clear = function() {
-  console.clear();
- }
+Number.prototype.to = function(limit) {
+  limit++
+  arr = [];
+  for (i=this.valueOf(); i<limit; i++){ arr.push(i)};
+  return arr
+}
